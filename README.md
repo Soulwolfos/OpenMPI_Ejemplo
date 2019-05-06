@@ -1,5 +1,7 @@
+// Rodrigo Lobos Leal
+
 # Ejemplo OpenMPI
-Pequeño programa de ejemplo sobre el uso de OpenMPI
+Programa de ejemplo sobre el uso de OpenMPI
 
 ## Stack de Construcción
 Este proyectoe está construido sobre la base de estar usando Ubuntu 18.04 LTS de 64 bits y las herramientas usadas fueron
@@ -12,3 +14,11 @@ Este proyectoe está construido sobre la base de estar usando Ubuntu 18.04 LTS d
 Para construir el proyecto hay que pararse en la carpeta app y ejecutar **make**
 Esto construirá un binario  **dist/programa**, que se deberá  distribuirse a todas las máquinas definidas en el archivo maquinas.txt
 
+``` 
+  mpirun --hostfile maquinas.txt dist/programa 
+```
+o sin el txt
+
+```
+  mpirun -np {un numero} dist/programa
+```
